@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: "Montserrat", sans-serif;
+ list-style-type: none;
+ color: #595959;
+}
+body {
+ background: linear-gradient(80deg, #dce4e6, #f6f6f6);
+}
+.title {
+ color: #948b89;
+ font-size: 1.9rem;
+ text-align: center;
+ padding-top: 30px;
+ font-weight: 300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.peopleContainer {
+ background-color: #f0fcff;
+ color: #706a68;
+ width: 100%;
+ margin: 100px auto 50px;
+ border-radius: 4px;
+ box-shadow: #948b89 10px 13px 19px;
+}
+.peopleContainer section {
+ padding: 10px 5px;
+}
+.peopleContainer h3 {
+ padding: 10px 0px 10px 15px;
+}
+.peopleContainer section .people:not(:last-child) {
+ border-bottom: #948b89 solid 1px;
+ box-shadow: 0 8px 12px -12px #948b89;
+}
+.people {
+ margin: 10px;
+ color: #706a68;
+}
+.people h4 {
+ font-size: 1rem;
+}
+.people p {
+ font-size: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+ display: flex;
+ flex-direction: column;
+ width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main button {
+ width: 65%;
+ margin: auto;
+ background-color: #f0fcff;
+ border: none;
+ border-radius: 4px;
+ outline: none;
+ padding: 8px;
+ color: #706a68;
+ box-shadow: #948b89 7px 9px 10px;
+ transition: all ease 0.3s;
+}
+main button:hover {
+ background-color: #dce4e6;
+ color: #fff;
+}
+main button:active {
+ box-shadow: none;
+}
+.mainContainer {
+ display: flex;
+ justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.counter {
+ margin: 100px 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter h2 {
+ margin-bottom: 50px;
+ color: #948b89;
+ font-size: 2rem;
+ text-align: center;
+}
+.counter button {
+ background-color: #f0fcff;
+ border: none;
+ border-radius: 4px;
+ outline: none;
+ padding: 8px;
+ color: #706a68;
+ box-shadow: #948b89 7px 9px 15px;
+ margin: 10px 5px;
+}
+
+.getUsers {
+ /* background-color: #948b89; */
+ margin-top: 50px;
+ padding: 5px;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+}
+.getUsers .userList {
+ background-color: #f0fcff;
+ margin: 20px 5px;
+ padding: 15px 4.5px;
+ display: flex;
+ border-radius: 4px;
+ box-shadow: #494646 2px 3px 7px;
+ min-width: 250px;
+}
+
+.getUsers .userList img {
+ border-radius: 50%;
+ height: 120px;
+ box-shadow: #948b89 2px 5px 8px 2px;
+ margin-left: 20px;
+}
+.getUsers .userList ul {
+ margin: auto 40px;
+ color: #494646;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+}
+.getUsers .userList ul li a {
+ text-decoration: none;
+ color: #948b89;
+ font-size: 0.8rem;
+ text-transform: none;
+ letter-spacing: normal;
+}
+
+@media screen and (max-width: 1200px) {
+ .getUsers {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+@media screen and (max-width: 950px) {
+ .getUsers {
+  grid-template-columns: 1fr;
+ }
+}
+
+.container {
+ width: 80%;
+ margin: auto;
+ text-align: center;
+ padding-top: 50px;
+}
+.container h2 {
+ font-size: 2rem;
+ font-weight: 400;
+}
+.container h3 {
+ font-size: 1rem;
+ font-weight: 300;
+}
+
+.tours {
+ border: #948b89 1px solid;
+ margin: 30px auto;
+ width: 45%;
+ border-radius: 4px;
+}
+.tours h3 {
+ font-weight: 600;
+}
+.tours p {
+ font-size: 0.8rem;
+}
+.tours img {
+ width: 100%;
+}
+.tours button:not(.info-btn) {
+ padding: 6px 7px;
+ font-size: 0.9rem;
+ border-radius: 3px;
+ margin: 7px;
+ background-color: #fff;
+ color: rgb(241, 104, 104);
+ border: rgb(241, 104, 104) solid 1px;
+ transition: all 0.3s ease;
+}
+.tours button:hover:not(.info-btn) {
+ background-color: rgb(241, 104, 104);
+ color: #fff;
+}
+.header {
+ display: flex;
+ justify-content: space-between;
+ width: 95%;
+ margin: auto;
+}
+.header h4 {
+ background-color: rgb(71, 170, 209);
+ padding: 2px 8px;
+ border-radius: 50px;
+ color: rgb(226, 231, 236);
+ font-weight: 300;
+}
+.desc {
+ padding: 7px;
+}
+main {
+ background-color: #fafafa;
+ margin: auto;
+ padding: 8px;
+}
+main > * {
+ margin: 10px;
+}
+
+.mainSector {
+ background-color: #f6f6f6;
+ border-radius: 8px;
+ padding-bottom: 2.5px;
+ margin: 15px;
+}
+.info-btn {
+ display: inline;
+ background-color: transparent;
+ border: none;
+ font-weight: 500;
+ transition: all ease-in 0.4s;
+}
+.info-btn:hover {
+ color: steelblue;
+}
+.info {
+ transition: ease-in-out all 0.4s;
 }
